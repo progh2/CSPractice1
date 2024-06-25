@@ -19,6 +19,11 @@ namespace CSPractice1
              * 여러줄 주석
              *                         */
             /*** XML 주석 ***/
+
+            // 출력
+            Console.WriteLine("Hello World");
+            Console.Write("뉴라인X");
+
         }
     }
 }
