@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSPractice1
 {
+
     class Box
     {
         public int width { get; set; }
@@ -71,6 +72,16 @@ namespace CSPractice1
 
     internal class Program
     {
+        class Test
+        {
+            public int value = 10;
+        }
+        static void Change(Test t)
+        {
+            t.value = 20;
+        }
+
+
         class ThirdClass
         {
 
@@ -267,6 +278,13 @@ namespace CSPractice1
             b.width = 100;
             b.Height = 100;
             // b.Height = -100; // 예외발생
+
+            // #5 22-9. 값 복사와 참조복사
+
+            Test test = new Test();
+            test.value = 100;
+            Change(test);
+            Console.WriteLine(test.value); // 20
         }
     }
 }
